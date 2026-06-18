@@ -158,7 +158,6 @@ header {
     padding: 0 5px;
     display: inline-block;
 }
-/* ركن فوق-شمال: خط فوق + خط شمال */
 .li-main::before {
     position: absolute;
     content: "";
@@ -169,7 +168,6 @@ header {
     border-top: 2px solid forestgreen;
     border-left: 2px solid forestgreen;
     transition: 0.6s;
-    /* border-style: solid; */
     opacity: 0;
 }
 .li-main:hover::before {
@@ -178,7 +176,6 @@ header {
     opacity: 1;
 }
 
-/* ركن تحت-يمين: خط تحت + خط يمين */
 .li-main::after {
     position: absolute;
     content: "";
@@ -330,10 +327,29 @@ header {
     transform: scale(1.2,1.2);
 }
 
-/* ========== MEN ========== */
-#Men {
-    height: 100vh;
-    background-color: blueviolet;
+/* ========== TRENDING ========== */
+#Trending {
+    min-height: 100vh;
+    background-color: #fff;
+    padding: 60px 0; 
+}
+
+.trend-contanier {
+    width: 80%;
+    margin: auto;
+}
+
+.trend-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 2px solid #eaeaea; 
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+}
+.trend-tabs{
+    display: flex;
+    gap: 0px 15px;
 }
 
 /* ========== Women ========== */
