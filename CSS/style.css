@@ -338,18 +338,65 @@ header {
     width: 80%;
     margin: auto;
 }
-
+.trend-product{
+    width: 80%;
+    margin: auto;
+}
 .trend-header-row {
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: flex-end;
     border-bottom: 2px solid #eaeaea; 
-    padding-bottom: 10px;
+    padding-bottom: 40px;
     margin-bottom: 40px;
 }
 .trend-tabs{
     display: flex;
     gap: 0px 15px;
+}
+.product-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;          
+    flex-wrap: wrap;
+}
+.product-card {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 22%;
+    min-width: 250px;   
+    height: 450px;      
+    background-color: #fff; 
+    overflow: hidden;
+    transition: 0.3s;
+}
+.product-img-wrapper {
+    width: 100%;
+    height: 75%;
+}
+.product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.product-text {
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;     
+    gap: 5px;
+}
+.product-text a {
+    color: #000000;
+    font-size: 25px;
+    font-weight: 600;
+}
+.product-text p {
+    color: rgb(70, 68, 68); 
+    font-size: 16px;
 }
 
 /* ========== Women ========== */
