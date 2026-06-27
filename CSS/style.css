@@ -175,24 +175,30 @@ header {
 }
 .li-main{
     position: relative;
-    padding: 0 5px;
+    padding: 9px;
     display: inline-block;
+}
+.li-main a{
+    display: block;
+    text-align: center;
 }
 .li-main::before {
     position: absolute;
     content: "";
     top: 0;
     left: 0;
-    width: 0;
-    height: 0;
-    border-top: 2px solid forestgreen;
-    border-left: 2px solid forestgreen;
+    width: 100%;
+    height: 100%;
+    border: 2px solid forestgreen;
+    border-left: transparent;
+    border-right:transparent;
+    transform-origin:left;
     transition: 0.6s;
-    opacity: 0;
+    transform: scaleX(0);
+    pointer-events: none;
 }
 .li-main:hover::before {
-    width: 97%;
-    height: 90%;
+    transform: scaleX(1);
     opacity: 1;
 }
 
@@ -201,19 +207,45 @@ header {
     content: "";
     bottom: 0;
     right: 0;
-    width: 0;
-    height: 0;
-    border-bottom: 2px solid forestgreen;
-    border-right: 2px solid forestgreen;
+    width: 100%;
+    height: 100%;
+    border: 2px solid forestgreen;
+    border-bottom: transparent;
+    border-top:transparent;
+    transform-origin:bottom;
     transition: 0.6s;
-    opacity: 0;
-    transform-origin: bottom;
+    transform: scaleY(0);
+    pointer-events: none;
 }
 .li-main:hover::after {
-    width: 96%;
-    height: 90%;
+    transform: scaleY(1);
     opacity: 1;
 }
+.fa-cart-shopping{
+    position: relative;
+}
+.fa-cart-shopping::after{
+    position: absolute;
+    content: "2";
+    top: -15px;
+    left: 4px;
+    background-color:forestgreen;
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    font-family: sans-serif;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.7s;
+}
+.fa-cart-shopping:hover::after{
+    top: -18px
+}
+
 /* === Announcement Bar === */
 .announcement-bar {
     background-color: black;
@@ -234,9 +266,9 @@ header {
 /* ========== MAIN ========== */
 #Home {
     height: 86vh;
-    background-image: url(../imegs/wallpaSAK.jpg);
+    background-image: url(../imegs/BANAR.png);
     background-size: cover;
-    background-position: center;
+    background-position: top;
 }
 .home-contanier{
     display: flex;
@@ -249,19 +281,19 @@ header {
 .home-content h1 {
     font-family: "Parisienne", cursive;
     font-weight: 900;
-    font-size: 90px;
+    font-size: 50px;
     margin: 2px;
 }
 .home-content h2 {
     font-family: "Aldrich", sans-serif;
     font-weight: 800;
-    font-size: 60px;
+    font-size: 30px;
     margin: 2px;
 }
 .home-content p {
     font-family: "Cormorant Garamond", serif;
     font-weight: 400;
-    font-size: 40px;
+    font-size: 20px;
     margin: 10px 0px;
 }
 .home-content input{
@@ -460,11 +492,34 @@ header {
     background-size: cover;
     background-position: center;
 }
+.b1{
+    background-image: url(../imegs/jacket-man.jpg);
+}
+.f-b1{
+    background-image: url(../imegs/jacket-man2.jpg);
+}
+.b2{
+    background-image: url(../imegs/Cotton\ Basic\ T-Shirt.jpg);
+}
+.f-b2{
+    background-image: url(../imegs/Cotton\ Basic\ T-Shirt2.jpg);
+}
+.b3{
+    background-image: url(../imegs/Elegant\ Evening\ man.jpg);
+}
+.f-b3{
+    background-image: url(../imegs/Elegant\ Evening\ man2.jpg);
+}
+.b4{
+    background-image: url(../imegs/Comfortable\ Sneakers.jpg);
+}
+.f-b4{
+    background-image: url(../imegs/Comfortable\ Sneakers2.jpg);
+}
 .front {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(../imegs/wallpa2.jpg);
     background-position: center;
     background-size: cover;
     z-index: 2;
@@ -502,7 +557,7 @@ header {
 #customer {
     height: 50vh;
     width: 100%;
-    background-color: rgba(64, 255, 64, 0.226);
+    background-color: rgba(198, 255, 198, 0.226);
     border-top: 1px solid black;
     border-bottom: 1px solid black;
 }
@@ -524,16 +579,20 @@ header {
     padding: 40px 0;
     gap: 40px 0;
 }
+.feed-content h1{
+    margin-bottom: 40px;
+}
 .customer-info-parent{
     display: flex;
     justify-content: center;
-    background-color: aqua;
+    margin-top: 90px;
 }
 .customer-pic{
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-image: url(../imegs/logo-spacex.jpg);
+    margin-right: 10px;
+    background-image: url(../imegs/mee.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -623,6 +682,30 @@ header {
     transform: translateY(-80%);
     transition: 1s ease-in-out;
     opacity: 0;
+}
+.r-b1{
+    background-image: url(../imegs/Summer\ T-Shirt.jpg);
+}
+.rf-b1{
+    background-image: url(../imegs/Summer\ T-Shirt2.jpg);
+}
+.r-b2{
+    background-image: url(../imegs/Watch.jpg);
+}
+.rf-b2{
+    background-image: url(../imegs/Watch2.jpg);
+}
+.r-b3{
+    background-image: url(../imegs/Leather\ Backpack.jpg);
+}
+.rf-b3{
+    background-image: url(../imegs/Leather\ Backpack2.jpg);
+}
+.r-b4{
+    background-image: url(../imegs/Vintage\ Sunglasses.jpg);
+}
+.rf-b4{
+    background-image: url(../imegs/Vintage\ Sunglasses2.jpg);
 }
 .product-card:hover .r-front {
     opacity: 1;
@@ -730,7 +813,7 @@ header {
 #New{
     height: 77vh;
     border-top: 1px solid rgb(39, 39, 39);
-    background-color: rgba(64, 255, 64, 0.226);
+    background-color: rgba(188, 255, 188, 0.226);
 }
 .new-contanier{
     width: 80%;
@@ -753,17 +836,25 @@ header {
 .item-container .img{
     width: 100%;
     height: 70%;
-    background-image: url(../imegs/wallpaSPACE.jpg);
     background-position: center;
     background-size: cover;
     transition: 0.5s;
+}
+.i-item1{
+    background-image: url(../imegs/Folded\ linen\ shirt.jpg);
+}
+.i-item2{
+    background-image: url(../imegs/Smart\ Watches.jpg);
+}
+.i-item3{
+    background-image: url(../imegs/Running\ Shoes.jpg);
 }
 .img:hover{
     transform: scale(1.04);
 }
 .iteam-content{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 29px;
+    font-size: 25px;
     margin-top: 10px;
     display: flex;
     flex-direction: column;
@@ -773,7 +864,7 @@ header {
 }
 .iteam-content p{
     font-size: 17px;
-    color: rgb(54, 54, 54);
+    color: rgba(54, 54, 54,0.7);
 }
 .iteam-content a{
     text-decoration: underline;
@@ -924,9 +1015,19 @@ footer {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 0 60px;
+    padding: 0px 60px;
     width: 80%;
     height: 100%;
+}
+.f-middle-content li{
+    padding: 10px 0px;
+    opacity: 0.65;
+    transition: 0.5s;
+}
+.f-middle-content li:hover{
+    transform: scale(1.1);
+    text-decoration: underline;
+
 }
 .f-middle-content a{
     color: white;
