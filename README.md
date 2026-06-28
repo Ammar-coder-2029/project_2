@@ -13,5 +13,5 @@ In this project, I focused on mastering the core fundamentals of web layout and 
 
 ## 🔗 Links
 
-* **Live Demo:** [View Website](#) 
+* **Live Demo:** [View Website](https://ammar-coder-2029.github.io/Captian_Shop/) 
 * **GitHub Repo:** [View Code](https://github.com/Ammar-coder-2029/Captian_Shop)
